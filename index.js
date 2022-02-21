@@ -67,14 +67,24 @@ const res2 = req2[userAction]();
 console.log(res2);
 
 const matematika = {
-    '+': () => pirmas + antras,
-    '-': () => pirmas - antras,
-    '*': () => pirmas * antras,
-    '/': () => pirmas / antras,
+    '+': (a, b) => a + b,
+    '-': (a, b) => a - b,
+    '*': (a, b) => a * b,
+    '/': (a, b) => a / b,
 };
+
+
+
+
+
+const veiksmas = '+';
 const pirmas = 7;
 const antras = 5;
-const veiksmas = '/';
-const rezultatas = matematika[veiksmas]();
+const trecias = 2;
 
-console.log(`${pirmas} ${veiksmas} ${antras} = ${rezultatas}`);
+const rezultatas12 = matematika[veiksmas](pirmas, antras);
+const rezultatas23 = matematika[veiksmas](antras, trecias);
+const rezultatas13 = matematika[veiksmas](pirmas, trecias);
+console.log(`${pirmas} ${veiksmas} ${antras} = ${rezultatas12}`);
+console.log(`${antras} ${veiksmas} ${trecias} = ${rezultatas23}`);
+console.log(`${pirmas} ${veiksmas} ${trecias} = ${rezultatas13}`);
