@@ -5,9 +5,6 @@ let button = document.querySelector('button');
 let result = document.querySelector('.result');
 let form = document.querySelector('form');
 
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
-
 const matematika = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
@@ -15,7 +12,8 @@ const matematika = {
     '/': (a, b) => a / b,
 };
 
-function skaiciuotuvas (){
+function skaiciuotuvas (evt){
+    evt.preventDefault();
     const skaicius1 = Number(firstNumber.value);
     const skaicius2 = Number(secondNumber.value);
     const veiksmas = action.value;
