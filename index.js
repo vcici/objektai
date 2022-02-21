@@ -73,10 +73,6 @@ const matematika = {
     '/': (a, b) => a / b,
 };
 
-
-
-
-
 const veiksmas = '+';
 const pirmas = 7;
 const antras = 5;
